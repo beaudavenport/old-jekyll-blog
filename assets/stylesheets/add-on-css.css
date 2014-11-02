@@ -1,0 +1,45 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    background-color: #f4f4dd;
+}
+.title {
+}
+.green-bar {
+    height: 2px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-color: #539DC2;
+}
+.pic {
+    padding-bottom: 30px;
+}
+.about {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+img {
+    max-width: 100%;
+    border: 1px solid gray;
+    display: block;
+}
+.mobile {
+    max-width: 50%;
+    margin: 0 auto;
+}
+.full {
+    max-width: 90%;
+    margin: 0 auto;
+}
+ul {
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .pic img {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+

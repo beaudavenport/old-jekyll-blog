@@ -2,9 +2,127 @@
 <html>
 <head>
     <title>Beau Davenport</title>
+    <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/stylesheets/add-on-css.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <p>Hello World!</p>    
+<div class="container">
+    <div class="title row text-center">
+        <h2>beau davenport</h2>
+        <h5 class="text-muted">full-stack web developer in St. Louis, MO</h5>
+    </div>
+    <div class="row">
+        <div class="container green-bar">
+        </div> 
+    </div>
+    <div class="row">
+    
+        <!-- about me sidebar/topbar -->
+        <div class="col-xs-12 col-sm-5 col-md-4">
+            <div class="panel panel-default about">
+                <div class="panel-body">
+                    <div class="pic col-xs-4 col-sm-12 col-md-12">
+                        <img src="assets/images/beau_brick2.png" />
+                    </div>
+                    <div class="col-xs-8 col-sm-12 col-md-12">
+                        <p class="text-muted">Hello! I build MVC applications for the web, predominantly in the javascript stack, with an emphasis
+                        on rich, responsive user experience.
+                        </p>
+                    </div>
+                    <div class="clearfix visible-xs-block"></div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 well info">
+                        <ul class="list-unstyled small">
+                            <li><span class="text-muted">email: </span>davenportbeau@gmail.com</li>
+                            <li><span class="text-muted">phone: </span>314-452-0150</li>
+                            <li><span class="text-muted">github: </span><a href="https://github.com/beaudavenport">github.com/beaudavenport</a></li>
+                            <li><strong><a href="assets/images/Resume2014.pdf">Download my resume (pdf)</a></strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- projects area -->
+        <div class="col-xs-12 col-sm-7 col-md-8">
+            <h3 class="text-center">applications</h3>
+            <div class="container green-bar">
+            </div>
+            
+            <!-- inventory helper -->
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <a href="http://inventoryhelper.herokuapp.com"><em><strong>inventoryhelper.herokuapp.com</strong></em></a>
+                </div>
+                
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div>
+                                <p><a href="http://inventoryhelper.herokuapp.com"><em>Inventory Helper</em></a> is an application for calculating and saving
+                                    coffee inventory in a roasting facility or coffee shop. It implements a REST-ful back-end with 
+                                    express.js and MongoDB, and a stateful front-end with backbone.js. The UI leverages bootstrap for responsive
+                                    usability on any device. <a href="http://jwt.io/">JSON web tokens</a> are used for authentication and 
+                                    <a href="https://www.npmjs.org/package/bcrypt-nodejs">bcrypt for node</a> is used for password hashing.
+                                </p>
+                                
+                                <ul class="list-unstyled small">
+                                    <li><span class="text-muted">github repo: </span><a href="https://github.com/beaudavenport/inventoryHelper">inventoryHelper</a></li>
+                                    <li><span class="text-muted">last commit: </span>Oct 8, 2014</li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                        <div class="col-xs-12 col-sm-6 col-md-8">
+                            <div class="row">
+                                <img class="mobile" src="assets/images/inventory-mobile.png" />    
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <img class="full" src="assets/images/inventory-full.png" />    
+                    </div>
+                </div>
+               
+            </div>    
+            
+            <!-- STL Tap Report -->
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <a href="http://stltapreport.azurewebsites.net/"><em><strong>stltapreport.azurewebsites.net</strong></em></a>
+                </div>
+                
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div>
+                                <p><a href="http://stltapreport.azurewebsites.net/"><em>STL Tap Report</em></a> is an informational database of craft beers local to the St. Louis
+                                area. It utilizes the ASP.NET MVC 4 framework for the back-end, with SQL Server database access
+                                using the Entity Framework. ASP.NET session state and hashed passwords are used for the login system.
+                                </p>
+                                
+                                <ul class="list-unstyled small">
+                                    <li><span class="text-muted">github repo: </span><a href="https://github.com/beaudavenport/launchcodecsharp">launchcodecsharp</a></li>
+                                    <li><span class="text-muted">last commit: </span>Mar 20, 2014</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-8">
+                            <div class="row">
+                                <img class="mobile" src="assets/images/stltapmobile.png" />    
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <img class="full" src="assets/images/stltapfull.png" />    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-
+         
