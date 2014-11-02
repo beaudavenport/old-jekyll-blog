@@ -1,9 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
     background-color: #f4f4dd;
-}
-.title {
 }
 .green-bar {
     height: 2px;
