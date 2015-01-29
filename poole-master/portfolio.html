@@ -1,0 +1,28 @@
+---
+layout: page
+title: Portfolio
+permalink: /portfolio/
+---
+
+{% for project in site.projects %}
+    <h2>{{ project.title }}</h2>
+    <p>
+        {{ project.content }}
+    </p>
+    <div class="portfolio-image">
+        
+        <!-- full-screen image set to default on full-screen devices -->
+        <div class="full-portfolio-image">
+            <img src="{{ site.baseurl }}{{ project.full_url }}">
+            <div class="toggle-button"><i class="fa fa-mobile"></i></div>    
+        </div>
+        
+        <!-- mobile-screen image set to default on mobile devices -->
+        <div class="mobile-portfolio-image">
+            <img src="{{ site.baseurl }}{{ project.mobile_url }}">
+            <div class="toggle-button"><i class="fa fa-desktop"></i></div>
+        </div>
+        
+    </div>
+    <hr />
+{% endfor %}

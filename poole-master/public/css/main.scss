@@ -1,0 +1,40 @@
+---
+---
+@charset "utf-8";
+
+//sitewide variables
+$shadow-depth: 8px;
+$serif: 'Bree Serif', serif;
+$sans-serif: 'Lato', sans-serif;
+
+//sitewide mix-ins
+@mixin box-shadow($blur) {
+    -moz-box-shadow: 0 0 $blur black;
+    -webkit-box-shadow: 0 0 $blur black;
+    box-shadow: 0 0 $blur black;
+}
+
+@mixin metal-plate {
+    @include box-shadow($shadow-depth - 2);
+    background-image: -moz-linear-gradient(top, #FFFFFF 0%, #D4D4D4 100%);
+    background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #D4D4D4 100%);
+    background-image: linear-gradient(top, #FFFFFF 0%, #D4D4D4 100%);
+    border-radius: .5rem;
+}
+
+@mixin metal-plate-button {
+    @include metal-plate;
+    &:hover {
+        background-image: -moz-linear-gradient(top, darken(#FFFFFF, 20%) 0%, darken(#D4D4D4, 20%) 100%);
+        background-image: -webkit-linear-gradient(top, darken(#FFFFFF, 20%) 0%, darken(#D4D4D4, 20%) 100%);
+    }
+}
+// import sass 
+@import 
+    "syntax",
+    "poole",
+    "beau";
+
+// import google fonts
+@import url(//fonts.googleapis.com/css?family=Bree+Serif);
+@import url(//fonts.googleapis.com/css?family=Lato);

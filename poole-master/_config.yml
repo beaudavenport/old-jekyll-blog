@@ -1,0 +1,21 @@
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Beau Davenport
+tagline:          Front-End, Javascript and Ruby
+url:              http://beaudavenport.github.io
+paginate:         1
+baseurl:          /
+author:
+  name:           Beau Davenport
+  url:            http://beaudavenport.github.io
+  email:          davenportbeau@gmail.com
+collections:
+  - projects
+
+# Custom vars
+version:          1.0.0
+github:
+  repo:           https://github.com/beaudavenport/beaudavenport.github.io

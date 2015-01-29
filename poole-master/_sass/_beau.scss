@@ -1,0 +1,195 @@
+/*
+ *  Custom Styling for beaudavenport.github.io
+ *
+ *
+ */
+
+body {
+    background-image: url('../images/tex2res4.png');
+}
+ul {
+    list-style: none;
+}
+header {
+    padding: 2rem;
+    @include metal-plate;
+    border-radius: 0;
+}
+.masthead-title small {
+    font-weight: 400;
+    color: #c0c0c0;
+}
+nav {
+    li {
+        display: inline;
+        text-align: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.sidebar {
+    padding: 1rem;
+    font-family: $sans-serif;
+}
+.gray-title {
+    color: #c0c0c0;
+    font-style: italic;
+}
+.post-image {
+    padding: 1rem;
+    img {
+        @include box-shadow($shadow-depth - 2);
+        display: block;
+        max-height: 20rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+}
+.image-caption {
+    color: #c0c0c0;
+    font-style: italic;
+    text-align: center;
+}
+.full-profile {
+    @include metal-plate-button;
+    padding: .25rem;
+    img {
+        max-width: 4rem;
+        margin: .25rem;
+    }
+}
+.link-container {
+    padding: .5rem;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.link-buttons {
+    @include metal-plate-button;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    margin-left: .4rem;
+    margin-right: .4rem;
+    text-shadow: 0 1px 0 #f8f8f8;
+    a {
+        color: inherit;
+    }
+}
+
+.mobile-profile img {
+    max-width: 2.25rem;
+    margin: 0 auto;
+    margin-top: .38rem;
+}
+.content {
+    @include box-shadow($shadow-depth);
+    padding-bottom: 4rem;
+    background-color: white;
+    font-family: $sans-serif;
+}
+.container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+// Toggleable images in portfolio section
+.portfolio-image {
+    padding: 1rem;
+    background-color: #f8f8f8;
+    height: 25rem;
+    img {
+        @include box-shadow($shadow-depth - 2);
+        display: block;
+        max-height: 20rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+}
+.toggle-button {
+    @include metal-plate-button;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 2rem;
+    height: 2rem;
+    text-shadow: 0 1px 0 #f8f8f8;
+    margin: auto;
+}
+
+/* 
+ * Responsive Content
+ */
+
+@media (max-width: 48em) {
+    // Turn off big profile pic on mobile devices
+    .full-profile {
+        display: none;
+    }
+    
+    // Hide full-screen portfolio images
+    .full-portfolio-image {
+        display: none;
+    }
+    
+    // Shrink nav bar padding on mobile devices
+    nav {
+        ul {
+            padding-left: 0px;
+        }
+        li {
+            padding-left: .25rem;
+            padding-right: .25rem;
+        }
+            
+    }
+    // Shrink header font
+    header h1 {
+        font-size: 1.5rem;
+    }
+    // Turn off header subtext
+    .masthead-title small {
+        display: none;
+    }
+}
+
+@media (min-width: 48em) {
+    
+    // Turn off small profile pic on tablets and full screens
+    .mobile-profile {
+        display: none;
+    }
+    
+    // Hide mobile portfolio images on tablets and full screens
+    .mobile-portfolio-image {
+        display: none;
+    }
+    
+    .sidebar {
+        float: left;
+        top: 1rem;
+        text-align: left;
+    }
+    .content {
+        max-width: 52rem;
+        margin-left: 7rem;
+        margin-right: 2rem;
+    }
+    .link-container {
+        flex-direction: column;
+        position: fixed;
+    }
+    .link-buttons {
+        margin-bottom: .5rem;
+    }
+}
+
+@media (min-width: 64em) {
+
+    .content {
+        margin-left: 7rem;
+        margin-right: 2rem;
+    }
+}
