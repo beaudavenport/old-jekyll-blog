@@ -38,11 +38,11 @@ thanks to the Liquid Templating. I loop through all of the projects in my
 <code>_projects</code> folder, wherein I include the images using these variables. 
 I also added a "toggle" button under the automatically loaded
 images that switches between the mobile and full-screen screenshots. Visit my 
-[portolio page]({{ site.root }}portfolio) to see it in action.
+[portolio page]({{ site.baseurl }}portfolio) to see it in action.
 
 All in all, I'm excited to be using Jekyll now for my portfolio.
 I'll be posting more about javascript, ruby, and front-end development, so check back soon. 
-Visit my [portolio]({{ site.root }}portfolio) and my [about page]({{ site.root }}about) to
+Visit my [portolio]({{ site.baseurl }}portfolio) and my [about page]({{ site.baseurl }}about) to
 learn more about me and see examples of my work!
 
 Cheers!
