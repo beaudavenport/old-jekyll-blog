@@ -1,5 +1,6 @@
 ---
 title: STL Tap Report
+anchor: stl_tap_report
 mobile_url: public/images/stltapmobile.png
 full_url: public/images/stltapfull.png
 ---

@@ -6,7 +6,7 @@ relative_permalinks: true
 title:            Beau Davenport
 tagline:          Front-End, Javascript and Ruby
 url:              http://beaudavenport.github.io
-paginate:         1
+paginate:         2
 baseurl:          /
 author:
   name:           Beau Davenport

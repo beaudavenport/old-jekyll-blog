@@ -1,5 +1,6 @@
 ---
 title: Inventory Helper
+anchor: inventory_helper
 mobile_url: public/images/inventory-mobile.png
 full_url: public/images/inventory-full.png
 ---
@@ -12,4 +13,4 @@ and bcrypt for node is used for password hashing.
 - <span class="gray-title">Live site:</span> [inventoryhelper.herokuapp.com](http://inventoryhelper.herokuapp.com)
 - <span class="gray-title">Github Repo:</span> [inventoryHelper](https://github.com/beaudavenport/inventoryHelper)
 - <span class="gray-title">First Commit:</span> July 4, 2014
-- <span class="gray-title">Most recent Commit:</span> October 8, 2014
+- <span class="gray-title">Most recent Commit:</span> February 9, 2015

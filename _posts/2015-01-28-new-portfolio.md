@@ -18,7 +18,7 @@ The most exciting change for me was the use of jekyll's <code>collections</code>
 In my previous site, any new projects were hard-coded with HTML.
 
 <div class="post-image">
-    <img src="{{ site.root }}public/images/old-portfolio.png">
+    <img src="{{ site.baseurl }}public/images/old-portfolio.png">
     <p class="image-caption">My previous portfolio site</p>
 </div>
 
