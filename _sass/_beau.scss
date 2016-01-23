@@ -10,9 +10,17 @@ body {
 ul {
     list-style: none;
 }
+ol {
+    overflow: auto;
+}
 pre {
     white-space: pre;
     overflow: auto;
+    word-break: normal;
+    word-wrap: normal;
+    code {
+        overflow: auto;
+    }
 }
 header {
     padding: 2rem;
