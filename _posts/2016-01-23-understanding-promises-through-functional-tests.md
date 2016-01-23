@@ -22,8 +22,9 @@ When we dig into these "inflection points", the actual mechanisms behind our imp
 
 ### Too late to TDD? ###
 At work and at home, I adhere as strongly as possible to __Test-Driven Development__.  This means that, when writing new code, I almost always write a test first.  The benefits of this practice are two fold:
-* Your tests, from the start, provide a safety net for your application, ensuring that functionality is working properly and alerting you when it is not.
-* You application reflects __your understanding__ of __what__ and __how__ functionality should work, as dictated by your tests.
+
+1. Your tests, from the start, provide a safety net for your application, ensuring that functionality is working properly and alerting you when it is not.
+2. You application reflects __your understanding__ of __what__ and __how__ functionality should work, as dictated by your tests.
 
 I have found that the second point has even greater long-term benefits than the first.  Your application grows with your tests, which grow with your understanding.  
 
@@ -32,7 +33,8 @@ But what if the "Driven" part is taken away, and the code is already completely 
 ### Inflection points and functional tests ###
 When I began back-filling tests for my promise implementation, I started with unit tests. This was a great way to solidify my understanding of each individual method. For example, here is my unit test for the ```.then``` method on my promise class:
 
-```javascript
+
+{% highlight javascript %}
 describe('.prototype.then', function() {
   it('creates a new internal promise and adds a queue item with the success and failure callbacks', function() {
     spyOn(window, 'ResolveThenable');
@@ -49,7 +51,8 @@ describe('.prototype.then', function() {
     expect(window.QueueItem).toHaveBeenCalledWith(jasmine.any(MyPromise), successCallback, failureCallback);
   });
 });
-```
+{% endhighlight %}
+
 
 Atomic, isolated unit tests are the foundation of a well-tested application, and ensure that each cog in the machine is doing exactly what it should be. Functional tests, on the other hand, ensure that those cogs are working together correctly to produce the results we expect. Instead of testing each individual method or property, we'll interact with our promise implementation as a whole. By controlling input and asserting output, we will illuminate the inner workings of a promise and the path that it takes through our code. Each of our inflection points is the perfect candidate for such functional tests. Here are the inflection points we will investigate:
 
@@ -62,16 +65,17 @@ Atomic, isolated unit tests are the foundation of a well-tested application, and
 These inflection points demonstrate the mechanisms behind how promises are used - When they execute (1), what ```.then``` actually does (2), when and where our callbacks are used (3 and 4) as well as how promises can be chained together (2 and 5).  Our functional tests will help us understand exactly where and how these inflection points are implemented, and we'll be well on our way to a deeper understanding... __I promise__ (just that one time, I swear...)
 
 Let's step through these functional tests, one at a time.  __Before we begin__, a few quick testing notes:
-* I'm using [jasmine](http://jasmine.github.io/). I've included a link to my spec runner [Here]({{ site.baseurl }}public/testSuites/promiseTest/specRunner.html) so you can run them yourself in the browser. You can also see the test suite [Here]({{ site.baseurl }}public/testSuites/promiseTest/spec/functionalPromiseSpec.js) and the source MyPromise.js [Here]({{ site.baseurl }}public/testSuites/promiseTest/src/MyPromise.js)
-* ```jasmine.createSpy()``` is used to create an jasmine spy object. Using this object as input allows us to make asserions about what happens to the object as it passes through the code (was it called? with what arguments?)
-* ```spyOn.and.callThrough()``` is used to create a spy for a function without interfering with how it works.
-* ```jasmine.createSpy().and.callFake(function() {})``` is used to create a jasmine spy object that behaves how we specify.
-* All of my tests are referencing a single file: check it out if you'd like to see the implementation and not just test examples.
+
+1. I'm using [Jasmine](http://jasmine.github.io/). I've included a link to my spec runner [here]({{ site.baseurl }}public/testSuites/promiseTest/SpecRunner.html), so you can run them yourself in the browser. You can also see the test suite [here]({{ site.baseurl }}public/testSuites/promiseTest/spec/functionalPromiseSpec.js) and the source MyPromise.js [here]({{ site.baseurl }}public/testSuites/promiseTest/src/MyPromise.js)
+2. ```jasmine.createSpy()``` is used to create an jasmine spy object. Using this object as input allows us to make asserions about what happens to the object as it passes through the code (was it called? with what arguments?)
+3. ```spyOn.and.callThrough()``` is used to create a spy for a function without interfering with how it works.
+4. ```jasmine.createSpy().and.callFake(function() {})``` is used to create a jasmine spy object that behaves how we specify.
+5. All of my tests are referencing a single file: check it out if you'd like to see the implementation and not just test examples.
 
 #### 1. When a promise is instantiated by a user, it executes. ####
 While very simple, this is an important point to note before proceeding. When a promise is instantiated, and the code is run, the function we pass in (referred to as a "resolver") is going to execute. Our resolver will be provided with 2 arguments, a "success" callback and "failure" callback. It is up to __our__ resolver function to decide if and when those callbacks are executed. When they are, however, the chain of resolution will kick off. So our test will verify that the function is called, without any delay, and provided these callbacks:
 
-```javascript
+{% highlight javascript %}
 describe('MyPromise Inflection points', function() {
   it('1. When a promise is instantiated by a user, it executes', function() {
     var resolver = jasmine.createSpy();
@@ -81,13 +85,13 @@ describe('MyPromise Inflection points', function() {
     expect(resolver).toHaveBeenCalledWith(jasmine.any(Function), jasmine.any(Function));
   });
 });
-```
+{% endhighlight %}
 
 #### 2. ```.then``` method calls add a "queue item", and return a new internal promise, exposing its own ```.then``` method. ####
 
 The ```.then``` method is where we put our promise to use, enqueuing functions that execute when a promise is either fulfilled or rejected. In our test, we'll check the promise queue for a "queue item", and ensure that our callbacks, and a new internal promise, are set on it.  We can then test that this new internal promise is returned to us so we can call ```.then``` on __it__.
 
-```javascript
+{% highlight javascript %}
 describe('2.', function() {
   it('.then method calls add a "queue item", and return a new internal promise, exposing its own .then method', function() {
     var successCallback = function() {};
@@ -112,14 +116,14 @@ describe('2.', function() {
     expect(secondQueueItem.failureCallback).toBe(failureCallback2);
   });
 });
-```
+{% endhighlight %}
 
 #### 3. If a queue item contains a success callback function, that function executes when the promise in which it lives resolves. ####
 Now we've verified that a "queue item" object contains a reference to a new promise and its success and failure callbacks, and that this object lives in a queue on its "parent" promise, diligently placed there by the ```.then``` method.  In this next test, we verify that when this parent promise is resolved with a value, the success callback will be called with that value. Whatever value the callback returns, the "child" promise will be resolved with that.
 
 Our setup is more complicated in this test. We'll actually implement an asynchronous resolver (simulating something like an xhr request or database lookup). Fortunately, jasmine provides a ```done``` callback argument that we can choose to use in our ```beforeEach``` function. If we choose to use it, Jasmine won't proceed to the actual assertions until that method is called. By placing that ```done``` call in our final ```.then``` callback, we are also testing that our promise is working as we expect. If that callback is never called, our test will timeout and throw up its hands in failure.
 
-```javascript
+{% highlight javascript %}
 describe('3.', function() {
   var myPromise;
   var newPromise;
@@ -152,12 +156,12 @@ describe('3.', function() {
     expect(newPromise.outcomeValue).toBe(secondValue);
   });
 });
-```
+{% endhighlight %}
 
 #### 4. If a queue item contains a failure callback function, that function executes when the promise in which it lives is rejected. ####
 This test will directly mirror the previous test, but will introduce two major additional points. The first point is that a promise that throws an uncaught error is rejected, with the error as the outcome value. Our test will throw an error to prove that point. Additionally, our test will use ```.catch``` instead of ```.then```, which turns out to be more or less syntactic sugar around the latter method, providing ```null``` for the success callback argument.
 
-```javascript
+{% highlight javascript %}
 describe('4.', function() {
   var myPromise;
   var newPromise;
@@ -199,12 +203,12 @@ describe('4.', function() {
     expect(failureCallback2).toHaveBeenCalledWith(new Error(secondError));
   });
 });
-```
+{% endhighlight %}
 
 #### 5. When a callback function executes, the value returned is checked. If it is determined to be a promise itself, that promise executes. ####
 Finally, we look at the other aspect of chaining. Since ```.then``` methods return "internal" promises, we can keep chaining them (so long as we return a value from our callbacks, otherwise our promise will be fulfilled with a value of ```undefined```). It turns out we can return completely NEW promise declarations as well as regular values (or thrown errors).  Our test will demonstrate that, if our ```.then``` callback returns a completely new promise instance, any chained ```.then``` methods from that point will execute when this new promise resolves, and our internal promise will resolve with the new promise value.
 
-```javascript
+{% highlight javascript %}
 describe('5.', function() {
   var myPromise;
   var newPromise;
@@ -257,17 +261,17 @@ describe('5.', function() {
     expect(thirdPromise.outcomeValue).toBe(secondValue + additionValue);
   });
 });
-```
+{% endhighlight %}
 
 #### 5.1. The results of the new promise instance are passed along ####
 Although part of the above test, I've brought attention to this assertion because it proves an important point - when my original promise resolves with a value, and I instantiate a new promise in my ```.then``` method, my internal promise (which resolves with that value) passes it along. We can use that value as part of our logic for our new promise. If we continue chaining in this way, we can start to build some really cool stuff.
 
-```javascript
+{% highlight javascript %}
 it('The result value of the promise instance is available for the next promise', function() {
   expect(newPromise.queue[0].successCallback).toBe(successCallback2);
   expect(thirdPromise.outcomeValue).toBe(secondValue + additionValue);
 });
-```
+{% endhighlight %}
 
 ### The promised benefits of good test coverage ###
 While by no means exhaustive, hopefully these inflection points and their functional test demonstrations provide a closer look at the underlying mechanisms of a promise implementation. As a side effect, we've also seen some methods for asynchronous testing in Javascript (yet another topic of simultaneous fun and frustration).
