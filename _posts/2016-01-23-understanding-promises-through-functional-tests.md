@@ -66,7 +66,7 @@ These inflection points demonstrate the mechanisms behind how promises are used 
 
 Let's step through these functional tests, one at a time.  __Before we begin__, a few quick testing notes:
 
-1. I'm using [Jasmine](http://jasmine.github.io/). I've included a link to my spec runner [here]({{ site.baseurl }}public/testSuites/promiseTest/SpecRunner.html), so you can run them yourself in the browser. You can also see the test suite [here]({{ site.baseurl }}public/testSuites/promiseTest/spec/functionalPromiseSpec.js) and the source MyPromise.js [here]({{ site.baseurl }}public/testSuites/promiseTest/src/MyPromise.js)
+1. I'm using [Jasmine](http://jasmine.github.io/). I've included a link to my spec runner [here]({{ site.baseurl }}public/testSuites/promiseTest/SpecRunner.html), so you can run them yourself in the browser. You can also see a gist of the test suite [here](https://gist.github.com/beaudavenport/430388988b0e11a9e99e) and the source MyPromise.js [here](https://gist.github.com/beaudavenport/d7660efb025c804affac)
 2. ```jasmine.createSpy()``` is used to create an jasmine spy object. Using this object as input allows us to make asserions about what happens to the object as it passes through the code (was it called? with what arguments?)
 3. ```spyOn.and.callThrough()``` is used to create a spy for a function without interfering with how it works.
 4. ```jasmine.createSpy().and.callFake(function() {})``` is used to create a jasmine spy object that behaves how we specify.
