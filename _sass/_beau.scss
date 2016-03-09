@@ -7,6 +7,10 @@
 body {
     background-image: url('../images/tex2res4.png');
 }
+.widescreen-wrapper {
+    max-width: 52em;
+    margin: 0 auto;
+}
 ul {
     list-style: none;
 }

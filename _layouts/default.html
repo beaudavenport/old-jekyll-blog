@@ -4,37 +4,38 @@
   {% include head.html %}
 
   <body>
-    
-    {% include sidebar.html %}
-    
-    <div class="content">
+    <div class="widescreen-wrapper">
+      {% include sidebar.html %}
       
-    
-      <header class="masthead">
-        <h1 class="masthead-title">
-          <a href="{{ site.baseurl }}" title="Home">{{ site.title }}</a>
-          <small>{{ site.tagline }}</small>
-        </h1>
-        <nav>
-          <ul>
-            <li><a href="{{ site.baseurl }}">Blog</a></li>
-            <li><a href="{{ site.baseurl }}about">About Me</a></li>
-            <li><a href="{{ site.baseurl }}portfolio">Portfolio</a></li>
-          </ul>
-      </nav>
-      </header>
-    <div class="container">
-
-      <main>
-        {{ content }}
-      </main>
-
-      <footer class="footer">
-        <small>
-          &copy; Beau Davenport <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
-        </small>
-      </footer>
-    </div>
+      <div class="content">
+        
+      
+        <header class="masthead">
+          <h1 class="masthead-title">
+            <a href="{{ site.baseurl }}" title="Home">{{ site.title }}</a>
+            <small>{{ site.tagline }}</small>
+          </h1>
+          <nav>
+            <ul>
+              <li><a href="{{ site.baseurl }}">Blog</a></li>
+              <li><a href="{{ site.baseurl }}about">About Me</a></li>
+              <li><a href="{{ site.baseurl }}portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
+        </header>
+      <div class="container">
+  
+        <main>
+          {{ content }}
+        </main>
+  
+        <footer class="footer">
+          <small>
+            &copy; Beau Davenport <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
+          </small>
+        </footer>
+      </div>
+      </div>
     </div>
   </body>
 </html>
