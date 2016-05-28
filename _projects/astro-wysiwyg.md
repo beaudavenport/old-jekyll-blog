@@ -3,6 +3,7 @@ title: Astro-bootstrap-wysiwyg
 anchor: astro-bootstrap-wysiwyg
 mobile_url: public/images/astro-bootstrap-mobile.png
 full_url: public/images/astro-bootstrap-full.png
+order: 2
 ---
 
 Astro-bootstrap-wysiwyg is a fork of 

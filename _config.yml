@@ -3,7 +3,7 @@ permalink:        pretty
 
 # Setup
 title:            Beau Davenport
-tagline:          Front-End, Javascript and Ruby
+tagline:          Front-End, Javascript and .NET
 url:              http://beaudavenport.github.io
 paginate:         2
 baseurl:          /

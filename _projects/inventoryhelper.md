@@ -3,6 +3,7 @@ title: Inventory Helper
 anchor: inventory_helper
 mobile_url: public/images/inventory-mobile.png
 full_url: public/images/inventory-full.png
+order: 3
 ---
 Inventory Helper is an application for calculating and saving coffee inventory 
 in a roasting facility or coffee shop. It implements a REST-ful back-end with express.js 

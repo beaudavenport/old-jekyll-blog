@@ -120,9 +120,15 @@ nav {
     img {
         @include box-shadow($shadow-depth - 2);
         display: block;
-        max-height: 20rem;
+        max-height: 19rem;
         margin: 0 auto;
         margin-bottom: 1rem;
+    }
+    p {
+        text-align: center;
+        font-size: 0.75rem;
+        color: gray;
+        margin-top: 5px;
     }
 }
 .toggle-button {
@@ -134,6 +140,7 @@ nav {
     height: 2rem;
     text-shadow: 0 1px 0 #f8f8f8;
     margin: auto;
+    cursor: pointer;
 }
 
 /* 

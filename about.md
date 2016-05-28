@@ -15,5 +15,5 @@ kayaking, or climbing.
 - <i class="fa fa-github"></i> [beaudavenport](https://github.com/beaudavenport)
 - <i class="fa fa-twitter"></i> [beau_dav](https://twitter.com/beau_dav)
 - <i class="fa fa-envelope"></i> [davenportbeau@gmail.com](mailto:davenportbeau@gmail.com)
-- <i class="fa fa-download"></i> __[Download my Resume]({{ site.root }}/public/images/Resume-2015.pdf)__
+- <i class="fa fa-download"></i> __[Download my Resume]({{ site.root }}/public/images/Resume-2016.pdf)__
 
