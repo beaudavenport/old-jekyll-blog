@@ -5,6 +5,7 @@ permalink:        pretty
 title:            Beau Davenport
 tagline:          Javascript/.NET/Cloud
 url:              http://beaudavenport.github.io
+markdown:         kramdown
 paginate:         2
 baseurl:          /
 author:
