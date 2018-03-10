@@ -12,14 +12,14 @@
       
         <header class="masthead">
           <h1 class="masthead-title">
-            <a href="{{ site.baseurl }}" title="Home">{{ site.title }}</a>
+            <a href="{{ '/' | relative-url }}" title="Home">{{ site.title }}</a>
             <small>{{ site.tagline }}</small>
           </h1>
           <nav>
             <ul>
-              <li><a href="{{ site.baseurl }}">Blog</a></li>
-              <li><a href="{{ site.baseurl }}about">About Me</a></li>
-              <li><a href="{{ site.baseurl }}portfolio">Portfolio</a></li>
+              <li><a href="{{  '/' | relative-url  }}">Blog</a></li>
+              <li><a href="{{  '/about' | relative-url  }}">About Me</a></li>
+              <li><a href="{{  '/portfolio' | relative-url  }}">Portfolio</a></li>
             </ul>
         </nav>
         </header>
