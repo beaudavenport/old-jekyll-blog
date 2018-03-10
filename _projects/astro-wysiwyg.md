@@ -1,8 +1,8 @@
 ---
 title: Astro-bootstrap-wysiwyg
 anchor: astro-bootstrap-wysiwyg
-mobile_url: public/images/astro-bootstrap-mobile.png
-full_url: public/images/astro-bootstrap-full.png
+mobile_url: /public/images/astro-bootstrap-mobile.png
+full_url: /public/images/astro-bootstrap-full.png
 order: 3
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Inventory Helper V2
 anchor: inventory_helper_v2
-mobile_url: public/images/inventory2-mobile.png
-full_url: public/images/inventory2-full.png
+mobile_url: /public/images/inventory2-mobile.png
+full_url: /public/images/inventory2-full.png
 order: 6
 ---
 Inventory Helper Version 2 is a client-side React.js rewrite of the original Inventory Helper. It also features a backwards-compatible 

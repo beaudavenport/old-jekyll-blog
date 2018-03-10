@@ -3,7 +3,7 @@ layout: post
 title: Client-side Storage "Gotcha"- localStorage vs. sessionStorage
 ---
 
-One of the best tutorials I utilized in my [Inventory Helper]({{ site.baseurl }}portfolio/#inventory_helper)
+One of the best tutorials I utilized in my [Inventory Helper]({{ '/portfolio#inventory-helper' | relative-url }})
 application was written on Sitepoint - _[Using JSON Web Tokens with Node.js](http://www.sitepoint.com/using-json-web-tokens-node-js/)_.
 In many ways, JSON Web Tokens (also known as JWT's, or "jots") are an increasingly attractive solution
 to using persistent data with a REST-ful API back-end.  No plaintext, no cookies, no sessions,

@@ -18,7 +18,7 @@ The most exciting change for me was the use of jekyll's <code>collections</code>
 In my previous site, any new projects were hard-coded with HTML.
 
 <div class="post-image">
-    <img src="{{ site.baseurl }}public/images/old-portfolio.png">
+    <img src="{{ '/public/images/old-portfolio.png' | relative-url }}">
     <p class="image-caption">My previous portfolio site</p>
 </div>
 
@@ -38,11 +38,11 @@ thanks to the Liquid Templating. I loop through all of the projects in my
 <code>_projects</code> folder, wherein I include the images using these variables. 
 I also added a "toggle" button under the automatically loaded
 images that switches between the mobile and full-screen screenshots. Visit my 
-[portolio page]({{ site.baseurl }}portfolio) to see it in action.
+[portolio page]({{ '/portfolio' | relative-url }}) to see it in action.
 
 All in all, I'm excited to be using Jekyll now for my portfolio.
 I'll be posting more about javascript, ruby, and front-end development, so check back soon. 
-Visit my [portolio]({{ site.baseurl }}portfolio) and my [about page]({{ site.baseurl }}about) to
+Visit my [portolio]({{ '/portfolio' | relative-url }}) and my [about page]({{ '/about' | relative-url }}) to
 learn more about me and see examples of my work!
 
 Cheers!

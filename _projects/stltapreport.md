@@ -1,8 +1,8 @@
 ---
 title: STL Tap Report
 anchor: stl_tap_report
-mobile_url: public/images/stltapmobile.png
-full_url: public/images/stltapfull.png
+mobile_url: /public/images/stltapmobile.png
+full_url: /public/images/stltapfull.png
 order: 1
 ---
 [STL Tap Report](http://stltapreport.azurewebsites.net/) STL Tap Report is an informational 

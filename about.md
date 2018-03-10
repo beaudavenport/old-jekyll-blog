@@ -13,5 +13,5 @@ kayaking, climbing, or spending time with my wife and two boys.
 - <i class="fa fa-github"></i> [beaudavenport](https://github.com/beaudavenport)
 - <i class="fa fa-twitter"></i> [beau_dav](https://twitter.com/beau_dav)
 - <i class="fa fa-envelope"></i> [davenportbeau@gmail.com](mailto:davenportbeau@gmail.com)
-- <i class="fa fa-download"></i> __[Download my Resume]({{ site.root }}/public/images/Resume-2018.pdf)__
+- <i class="fa fa-download"></i> __[Download my Resume]({{ "/public/images/Resume-2018.pdf" | relative-url }})__
 

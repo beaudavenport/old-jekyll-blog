@@ -1,8 +1,8 @@
 ---
 title: Inventory Helper
 anchor: inventory_helper
-mobile_url: public/images/inventory-mobile.png
-full_url: public/images/inventory-full.png
+mobile_url: /public/images/inventory-mobile.png
+full_url: /public/images/inventory-full.png
 order: 2
 ---
 Inventory Helper is an application for calculating and saving coffee inventory 
