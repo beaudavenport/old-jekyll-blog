@@ -3,7 +3,7 @@ layout: page
 title: Portfolio
 permalink: /portfolio/
 ---
-{% assign projects = site.projects | sort: 'order' %}
+{% assign projects = site.projects | sort: 'order' | reverse %}
 {% for project in projects %}
     <h2 id="{{ project.anchor }}">{{ project.title }}</h2>
     <p>

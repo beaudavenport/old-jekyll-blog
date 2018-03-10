@@ -3,7 +3,7 @@ title: STL Tap Report
 anchor: stl_tap_report
 mobile_url: public/images/stltapmobile.png
 full_url: public/images/stltapfull.png
-order: 4
+order: 1
 ---
 [STL Tap Report](http://stltapreport.azurewebsites.net/) STL Tap Report is an informational 
 database of craft beers local to the St. Louis area. It utilizes the ASP.NET MVC 4 framework 

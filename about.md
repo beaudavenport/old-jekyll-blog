@@ -3,17 +3,15 @@ layout: page
 title: About Me
 permalink: /about/
 ---
-Hey there! My name is Beau, and I'm a web developer in St. Louis, Missouri. I build MVC 
-web applications, mostly in the Javascript stack, with an emphasis on Front-End functionality. 
-My work also incorporates Ruby on Rails as well as Responsive Design, both bootstrap-based and using
-CSS3 and SASS. 
+Hey there! My name is Beau, and I'm a software engineer in St. Louis, Missouri. I specialize in React.js and Javascript generally,
+both client-side and server side, as well as .NET, with an emphasis in cloud-based technologies.
 
-When I'm not writing code or learning a new framework, I'm usually roasting coffee, 
-kayaking, or climbing.
+When I'm not writing code, I'm usually roasting coffee, 
+kayaking, climbing, or spending time with my wife and two boys.
 
 
 - <i class="fa fa-github"></i> [beaudavenport](https://github.com/beaudavenport)
 - <i class="fa fa-twitter"></i> [beau_dav](https://twitter.com/beau_dav)
 - <i class="fa fa-envelope"></i> [davenportbeau@gmail.com](mailto:davenportbeau@gmail.com)
-- <i class="fa fa-download"></i> __[Download my Resume]({{ site.root }}/public/images/Resume-2016.pdf)__
+- <i class="fa fa-download"></i> __[Download my Resume]({{ site.root }}/public/images/Resume-2018.pdf)__
 

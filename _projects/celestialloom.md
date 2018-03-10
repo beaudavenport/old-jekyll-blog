@@ -3,7 +3,7 @@ title: The Celestial Loom
 anchor: celestial_loom
 mobile_url: public/images/celestial-mobile.png
 full_url: public/images/celestial-full.png
-order: 1
+order: 4
 ---
 The Celestial Loom is an e-commerce and astrological information website.  Built with Jekyll, it uses flat-file
 collections to populate pages for available services and information about the Zodiac.  Dynamically rendered hosted
